@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CreateJS export from christmas2015_v1</title>
+    <meta name="viewport" content="width=800"> 
+
+<style>
+audio{display:none}
+#canvas{
+
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-400px;
+	margin-top:-300px;
+}
+body{
+	background:#000;	
+}
+</style>
+<script src="http://code.createjs.com/easeljs-0.5.0.min.js"></script>
+<script src="http://code.createjs.com/tweenjs-0.3.0.min.js"></script>
+<script src="http://code.createjs.com/movieclip-0.5.0.min.js"></script>
+<script src="http://code.createjs.com/preloadjs-0.2.0.min.js"></script>
+<script src="http://code.createjs.com/soundjs-0.3.0.min.js"></script> 
+<!-- <script src="http://www.createjs.com/lib/soundjs-NEXT.combined.js"></script> -->
+
+
+<script src="christmas2015_v2.js"></script>
+
+<script>
+var canvas, stage, exportRoot;
+
+function init() {
+	canvas = document.getElementById("canvas");
+	images = images||{};
+
+	var manifest = [
+		{src:"images/Bitmap3.jpg", id:"Bitmap3"},
+		{src:"images/greenBackground.jpg", id:"greenBackground"},
+		{src:"images/from_us.png", id:"from_us"},
+		{src:"images/Christi.png", id:"Christi"},
+		{src:"images/Collon.png", id:"Collon"},
+		{src:"images/Danna.png", id:"Danna"},
+		{src:"images/Jane.png", id:"Jane"},
+		{src:"images/Lang.png", id:"Lang"},
+		{src:"images/larry.png", id:"larry"},
+		{src:"images/Mickey.png", id:"Mickey"},
+		{src:"images/mike.png", id:"mike"},
+		{src:"images/mindi.png", id:"mindi"},
+		{src:"images/Natalie.png", id:"Natalie"},
+		{src:"images/noise.png", id:"noise"},
+		{src:"images/tawnya.png", id:"tawnya"},
+		{src:"sounds/wewishyou.mp3", id:"wewishyou"}
+	];  
+
+	var loader = new createjs.PreloadJS(false);
+	loader.installPlugin(createjs.SoundJS);
+	loader.onFileLoad = handleFileLoad;
+	loader.onComplete = handleComplete;
+	loader.loadManifest(manifest);
+
+}
+
+function handleFileLoad(o) {
+	if (o.type == "image") { images[o.id] = o.result; }
+}
+
+function handleComplete() {
+	exportRoot = new lib.christmas2015_v2();
+	exportRoot.tree.stop();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(24);
+	createjs.Ticker.addListener(stage);
+
+	console.log(exportRoot.tree.loop = false);
+
+
+	exportRoot.backside.visible = false;
+	exportRoot.tree.shape_67.onTick = function() {
+		this.onTick = null;
+	  setTimeout( playBack, 1000); 
+
+	}
+ 
+}
+
+function playBack(){
+
+	// Fadeout tree	
+	createjs.Tween.get(exportRoot.tree).wait(2000).to({alpha:0},1000)
+
+	// Fadein Backside
+	exportRoot.backside.visible = true;
+	exportRoot.backside.alpha = 0;
+	createjs.Tween.get(exportRoot.backside).wait(3000).to({alpha:1},2000)
+
+	// Speckles
+//	createjs.Tween.get(exportRoot.instance_1).to({alpha:0},2000)
+	
+	for (var i = 0; i< exportRoot.backside.logoset.sparkles.children.length; i++) {
+		var ch = exportRoot.backside.logoset.sparkles.children[i];
+		ch.stop();
+		var callback = new (function(mc){
+			var me = this;
+			this.sparkle = mc;
+			this.play = function() {
+				me.sparkle.loop = true;
+				me.sparkle.play();
+				console.log("Play");
+			}
+			return this;
+		})(ch);
+		var delay =  200 * (i%4) ;
+		var delay = Math.random() * 4000 ;
+		console.log(delay)
+		setTimeout(callback.play,  delay );
+	}
+}
+
+function playSound(name, loop) {
+	// var instance = createjs.Sound.play(name);
+	var instance = createjs.SoundJS.play(name, createjs.SoundJS.INTERRUPT_EARLY, 0, 0, loop);
+	console.log(instance);
+	if (instance == null || instance.playState == createjs.SoundJS.PLAY_FAILED) {
+		var s = document.getElementById(name);
+		s.play();
+		return;
+	}
+}
+
+ 
+</script>
+</head>
+
+<body onload="init();">
+	<canvas id="canvas" width="800" height="600" style="background-color:#fff3e5"></canvas>
+</body>
+
+
+<audio id="wewishyou" controls>
+  <source src="sounds/wewishyou.m4a" type="audio/mpeg">
+  <source src="sounds/wewishyou.ogg" type="audio/ogg">
+	Your browser does not support the audio element.
+</audio> 
+<script>
+var sound; 
+document.addEventListener('click', function(){
+	setTimeout(function() {exportRoot.tree.play();}, 2000);
+	playSound('wewishyou');
+ 
+
+})	
+
+</script>
+</html>
