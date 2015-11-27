@@ -82,6 +82,12 @@ p.nominalBounds = new cjs.Rectangle(0,0,270,72);
 p.nominalBounds = new cjs.Rectangle(0,0,320,83);
 
 
+(lib.loui = function() {
+	this.initialize(img.loui);
+}).prototype = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,261,74);
+
+
 (lib.Mickey = function() {
 	this.initialize(img.Mickey);
 }).prototype = new cjs.Bitmap();
@@ -112,6 +118,12 @@ p.nominalBounds = new cjs.Rectangle(0,0,292,63);
 p.nominalBounds = new cjs.Rectangle(0,0,1042,1250);
 
 
+(lib.peyton = function() {
+	this.initialize(img.peyton);
+}).prototype = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,303,73);
+
+
 (lib.playcard = function() {
 	this.initialize(img.playcard);
 }).prototype = new cjs.Bitmap();
@@ -121,7 +133,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,1000,1200);
 (lib.replay = function() {
 	this.initialize(img.replay);
 }).prototype = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,297,136);
+p.nominalBounds = new cjs.Rectangle(0,0,100,46);
 
 
 (lib.tawnya = function() {
@@ -286,11 +298,11 @@ p.nominalBounds = new cjs.Rectangle(-12.9,-13.9,54,30);
 
 	// Layer 1
 	this.instance = new lib.replay();
-	this.instance.setTransform(0,0,0.253,0.253);
+	this.instance.setTransform(0,0,0.746,0.746);
 
 	this.addChild(this.instance);
 }).prototype = p = new cjs.Container();
-p.nominalBounds = new cjs.Rectangle(0,0,75.2,34.5);
+p.nominalBounds = new cjs.Rectangle(0,0,74.6,34.3);
 
 
 (lib.playcard_1 = function() {
@@ -712,13 +724,13 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{},t
 	this.instance_2 = new lib.green_border();
 	this.instance_2.setTransform(250,300,1,1,0,0,0,250,300);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2}]}).wait(427));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2}]}).wait(450));
 
 	// speckles
 	this.instance_3 = new lib.noise();
 	this.instance_3.setTransform(-200.8,-181.5,0.804,0.804);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_3}]}).wait(427));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_3}]}).wait(450));
 
 	// star
 	this.instance_4 = new lib.star();
@@ -730,63 +742,63 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{},t
 	this.instance_6 = new lib.star();
 	this.instance_6.setTransform(254,73.3);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_4}]}).to({state:[]},221).to({state:[{t:this.instance_6},{t:this.instance_5},{t:this.instance_4}]},3).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},3).to({state:[{t:this.instance_4}]},2).to({state:[{t:this.instance_6},{t:this.instance_5},{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},3).to({state:[]},3).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},3).to({state:[]},2).to({state:[{t:this.instance_4}]},1).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},3).to({state:[]},2).to({state:[{t:this.instance_4}]},1).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},3).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},3).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},3).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},3).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},3).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},2).to({state:[{t:this.instance_4}]},2).to({state:[]},3).to({state:[{t:this.instance_4}]},2).wait(2));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_4,p:{x:254}}]}).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:254}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:253.2}}]},4).to({state:[]},3).to({state:[{t:this.instance_4,p:{x:253.2}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:254}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:254}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:253.2}}]},4).to({state:[]},3).to({state:[{t:this.instance_4,p:{x:253.2}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:254}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:253.2}}]},4).to({state:[]},3).to({state:[{t:this.instance_4,p:{x:253.2}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:254}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:254}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:253.2}}]},4).to({state:[]},3).to({state:[{t:this.instance_4,p:{x:254}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:253.2}}]},4).to({state:[]},3).to({state:[{t:this.instance_4,p:{x:253.2}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:254}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:254}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:253.2}}]},4).to({state:[]},3).to({state:[]},3).to({state:[{t:this.instance_4,p:{x:253.2}}]},1).to({state:[]},3).to({state:[{t:this.instance_4,p:{x:253.2}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:254}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:254}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:253.2}}]},4).to({state:[]},3).to({state:[{t:this.instance_4,p:{x:254}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:253.2}}]},4).to({state:[]},3).to({state:[{t:this.instance_4,p:{x:253.2}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:252.4}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:253.2}}]},4).to({state:[]},4).to({state:[{t:this.instance_4,p:{x:253.2}}]},3).to({state:[]},3).to({state:[{t:this.instance_4,p:{x:253.2}}]},3).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:253.2}}]},3).to({state:[]},3).to({state:[{t:this.instance_6},{t:this.instance_5},{t:this.instance_4,p:{x:254}}]},3).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},3).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[{t:this.instance_6},{t:this.instance_5},{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},3).to({state:[]},3).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},3).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},1).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},3).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},1).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},3).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},3).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},3).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},3).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},3).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},2).to({state:[{t:this.instance_4,p:{x:254}}]},2).to({state:[]},3).to({state:[{t:this.instance_4,p:{x:254}}]},2).wait(2));
 
 	// we
 	this.instance_7 = new lib.we();
 	this.instance_7.setTransform(252.2,124.9);
 	this.instance_7._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(30).to({_off:false},0).to({_off:true},85).wait(18).to({_off:false},0).to({_off:true},86).wait(7).to({_off:false},0).wait(201));
+	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(53).to({_off:false},0).to({_off:true},85).wait(18).to({_off:false},0).to({_off:true},85).wait(7).to({_off:false},0).wait(202));
 
 	// wish
 	this.instance_8 = new lib.wish();
 	this.instance_8.setTransform(252.2,176.8);
 	this.instance_8._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(44).to({_off:false},0).to({_off:true},71).wait(35).to({_off:false},0).to({_off:true},69).wait(20).to({_off:false},0).wait(188));
+	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(67).to({_off:false},0).to({_off:true},71).wait(35).to({_off:false},0).to({_off:true},69).wait(20).to({_off:false},0).wait(188));
 
 	// you a
 	this.instance_9 = new lib.you_a();
 	this.instance_9.setTransform(252.2,240.8);
 	this.instance_9._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(58).to({_off:false},0).to({_off:true},56).wait(51).to({_off:false},0).to({_off:true},53).wait(35).to({_off:false},0).wait(174));
+	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(81).to({_off:false},0).to({_off:true},56).wait(51).to({_off:false},0).to({_off:true},53).wait(35).to({_off:false},0).wait(174));
 
 	// merry
 	this.instance_10 = new lib.merry();
 	this.instance_10.setTransform(252,300.7);
 	this.instance_10._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(72).to({_off:false},0).to({_off:true},41).wait(70).to({_off:false},0).to({_off:true},34).wait(53).to({_off:false},0).wait(157));
+	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(95).to({_off:false},0).to({_off:true},41).wait(70).to({_off:false},0).to({_off:true},34).wait(53).to({_off:false},0).wait(157));
 
 	// christmas
 	this.instance_11 = new lib.christmas();
 	this.instance_11.setTransform(254,371.5);
 	this.instance_11._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(92).to({_off:false},0).to({_off:true},20).wait(87).to({_off:false},0).to({_off:true},17).wait(71).to({_off:false},0).wait(140));
+	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(115).to({_off:false},0).to({_off:true},20).wait(87).to({_off:false},0).to({_off:true},17).wait(71).to({_off:false},0).wait(140));
 
 	// and a
 	this.instance_12 = new lib.and_a();
 	this.instance_12.setTransform(151.9,446.8);
 	this.instance_12._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_12).wait(311).to({_off:false},0).wait(116));
+	this.timeline.addTween(cjs.Tween.get(this.instance_12).wait(334).to({_off:false},0).wait(116));
 
 	// happy
 	this.instance_13 = new lib.happy();
 	this.instance_13.setTransform(312.8,440.1);
 	this.instance_13._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_13).wait(331).to({_off:false},0).wait(96));
+	this.timeline.addTween(cjs.Tween.get(this.instance_13).wait(354).to({_off:false},0).wait(96));
 
 	// new year
 	this.new_year = new lib.new_year();
 	this.new_year.setTransform(254,515.9);
 	this.new_year._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.new_year).wait(346).to({_off:false},0).wait(81));
+	this.timeline.addTween(cjs.Tween.get(this.new_year).wait(369).to({_off:false},0).wait(81));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-200.8,-181.5,837.9,1005.1);
@@ -909,57 +921,63 @@ p.nominalBounds = new cjs.Rectangle(-216.8,-162.1,434.1,343.2);
 
 	// replay
 	this.bt_replay = new lib.replay_1();
-	this.bt_replay.setTransform(258.7,566.7,1,1,0,0,0,37.6,17.2);
+	this.bt_replay.setTransform(443.5,564.3,1,1,0,0,0,37.6,17.2);
 
 	// from all
 	this.instance_44 = new lib.from_us();
-	this.instance_44.setTransform(150,204.8,0.432,0.432);
+	this.instance_44.setTransform(156.4,232.1,0.384,0.384);
 
 	// signatures
+	this.instance_45 = new lib.loui();
+	this.instance_45.setTransform(354.5,256.6,0.513,0.513);
+
+	this.instance_46 = new lib.peyton();
+	this.instance_46.setTransform(302.2,93.3,0.498,0.498);
+
 	this.logoset = new lib.logoset();
-	this.logoset.setTransform(249.7,335.9,0.578,0.578,0,0,0,-2.1,2);
+	this.logoset.setTransform(249.3,346.9,0.495,0.495,0,0,0,-2.2,1.9);
 
-	this.instance_45 = new lib.tawnya();
-	this.instance_45.setTransform(236.3,135.3,0.515,0.515);
+	this.instance_47 = new lib.tawnya();
+	this.instance_47.setTransform(256.4,156.6,0.515,0.515);
 
-	this.instance_46 = new lib.Danna();
-	this.instance_46.setTransform(81.7,83.3,0.48,0.48);
+	this.instance_48 = new lib.Danna();
+	this.instance_48.setTransform(30.5,533.7,0.48,0.48);
 
-	this.instance_47 = new lib.mindi();
-	this.instance_47.setTransform(364.3,76.3,0.501,0.501);
+	this.instance_49 = new lib.mindi();
+	this.instance_49.setTransform(220.3,501.9,0.501,0.501);
 
-	this.instance_48 = new lib.mike();
-	this.instance_48.setTransform(251.9,12.5,0.505,0.505);
+	this.instance_50 = new lib.mike();
+	this.instance_50.setTransform(251.9,12.5,0.505,0.505);
 
-	this.instance_49 = new lib.Natalie();
-	this.instance_49.setTransform(37.9,25.4,0.494,0.494);
+	this.instance_51 = new lib.Natalie();
+	this.instance_51.setTransform(37.9,25.4,0.494,0.494);
 
-	this.instance_50 = new lib.Mickey();
-	this.instance_50.setTransform(18,521.1,0.492,0.492);
+	this.instance_52 = new lib.Mickey();
+	this.instance_52.setTransform(67.7,98,0.492,0.492);
 
-	this.instance_51 = new lib.Collon();
-	this.instance_51.setTransform(353.3,520.2,0.497,0.497);
+	this.instance_53 = new lib.Collon();
+	this.instance_53.setTransform(9.3,291.4,0.497,0.497);
 
-	this.instance_52 = new lib.Lang();
-	this.instance_52.setTransform(362.4,418.9,0.493,0.493);
+	this.instance_54 = new lib.Lang();
+	this.instance_54.setTransform(343.2,450.1,0.493,0.493);
 
-	this.instance_53 = new lib.Jane();
-	this.instance_53.setTransform(190.9,466.9,0.512,0.512);
+	this.instance_55 = new lib.Jane();
+	this.instance_55.setTransform(362.1,354.1,0.512,0.512);
 
-	this.instance_54 = new lib.larry();
-	this.instance_54.setTransform(28.3,426,0.515,0.515);
+	this.instance_56 = new lib.larry();
+	this.instance_56.setTransform(24.3,446.8,0.515,0.515);
 
-	this.instance_55 = new lib.Christi();
-	this.instance_55.setTransform(16.6,151.6,0.501,0.501);
+	this.instance_57 = new lib.Christi();
+	this.instance_57.setTransform(23,178.8,0.501,0.501);
 
 	// background
-	this.instance_56 = new lib.greenBackground();
-	this.instance_56.setTransform(0,0,0.417,0.417);
+	this.instance_58 = new lib.greenBackground();
+	this.instance_58.setTransform(0,0,0.417,0.417);
 
-	this.instance_57 = new lib.green_background();
-	this.instance_57.setTransform(250,300,1,1,0,0,0,250,300);
+	this.instance_59 = new lib.green_background();
+	this.instance_59.setTransform(250,300,1,1,0,0,0,250,300);
 
-	this.addChild(this.instance_57,this.instance_56,this.instance_55,this.instance_54,this.instance_53,this.instance_52,this.instance_51,this.instance_50,this.instance_49,this.instance_48,this.instance_47,this.instance_46,this.instance_45,this.logoset,this.instance_44,this.bt_replay);
+	this.addChild(this.instance_59,this.instance_58,this.instance_57,this.instance_56,this.instance_55,this.instance_54,this.instance_53,this.instance_52,this.instance_51,this.instance_50,this.instance_49,this.instance_48,this.instance_47,this.logoset,this.instance_46,this.instance_45,this.instance_44,this.bt_replay);
 }).prototype = p = new cjs.Container();
 p.nominalBounds = new cjs.Rectangle(0,0,500,600);
 
